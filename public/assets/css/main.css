@@ -110,11 +110,11 @@ body {
 }
 
 .sidebar a:hover {
-  background-color: rgba(174, 175, 180, 0.3); /* Transparent background */
-  border-bottom: 1px solid #080808; /* Small border */
+  background-color: rgba(174, 175, 180, 0.114); /* Transparent background */
+  border-bottom: 1px solid #fae6e6; /* Small border */
 }
 .nav-link.active {
-  background-color: rgba(174, 175, 180, 0.3); /* Transparent background */
+  background-color: rgba(174, 175, 180, 0.3) !important; /* Transparent background */
   border-bottom: 1px solid #080808; /* Small border */
 }
 .row-border{
@@ -125,7 +125,7 @@ body {
 }
 .content {
   overflow-y: auto;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100vh;
   background-color: #080a15;
   color: #019214;
@@ -134,8 +134,46 @@ body {
 .sidebar-toggle {
   display: none !important;
 }
+.bottom-div {
+  border-top: 1px solid #dcdada !important;
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.modal-content{
+  background-color: #131422 !important;
+  color: #019214 !important;
+}
+.form-control{
+  background-color: #dcdada !important;
+  color: #495057 !important;
+}
+.hidden {
+  display: none;
+}
+.animated-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.animated-content.show {
+  max-height: 500px; /* Adjust based on your content */
+  opacity: 1;
+}
+.form-control:disabled{
+  background-color: #9e9e9e !important;
+  color: #495057 !important;
+  cursor: not-allowed !important;
+}
 
 @media (max-width: 768px) {
+  #close-sidebar-mobile{
+    display: block !important;
+  }
   .sidebar {
     position: fixed;
     width: 250px;
@@ -155,4 +193,5 @@ body {
   .content {
     padding-left: 0;
   }
+  
 }
